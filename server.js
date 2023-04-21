@@ -31,6 +31,6 @@ fs.writeFile("./db/db.json",JSON.stringify(notesData))
 app.get('/api/notes', (req, res) => res.json(notesData));
 
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || PORT, () => {
   console.log(`Example app listening at http://localhost:${PORT}`);
 });
